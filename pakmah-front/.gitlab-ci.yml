@@ -1,0 +1,16 @@
+image: docker:latest
+
+services:
+    - docker:dind
+variables:
+    DOCKER_DRIVER: overlay
+
+stages:
+    - package_to_docker_image_ShopfarmStarterPack
+
+package_to_docker_image_ShopfarmStarterPack:
+    stage: package_to_docker_image_ShopfarmStarterPack
+    script:
+        - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+        - docker build -t registry.gitlab.com/pakmahstore/frontend .
+        - docker push registry.gitlab.com/pakmahstore/frontend

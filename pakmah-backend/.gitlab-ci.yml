@@ -1,0 +1,16 @@
+image: docker:latest
+
+services:
+  - docker:dind
+variables:
+  DOCKER_DRIVER: overlay
+
+stages:
+  - package_to_docker_image_workspace
+
+package_to_docker_image_workspace:
+  stage: package_to_docker_image_workspace
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+    - docker build -t registry.gitlab.com/pakmahstore/backend .
+    - docker push registry.gitlab.com/pakmahstore/backend

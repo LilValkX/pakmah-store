@@ -1,0 +1,38 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.6.0",
+    "@heroicons/react": "^1.0.6",
+    "async_hooks": "^1.0.0",
+    "axios": "^0.27.2",
+    "discord.js": "^14.3.0",
+    "next": "12.1.5",
+    "next-redux-wrapper": "^7.0.5",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-hook-form": "^7.30.0",
+    "react-hot-toast": "^2.2.0",
+    "react-redux": "^8.0.1",
+    "react-slick": "^0.29.0",
+    "react-toastify": "^8.2.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.4.9"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.5",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24"
+  }
+}
